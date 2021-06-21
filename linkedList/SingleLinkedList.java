@@ -66,13 +66,13 @@ public class SingleLinkedList {
             if(location<=1){
                 node.setNext(head);
                 head=node;
-            }else if(location>= getSize()){
+            }else if(location>getSize()){
                 node.setNext(null);
                 tail.setNext(node);
                 tail= node;
             }else{
                 SingleNode currentNode= head;
-                for(int i =1; i<getSize();i++){
+                for(int i =1; i<location-1;i++){
                     currentNode= currentNode.getNext();
                 }
                 node.setNext(currentNode.getNext());
@@ -114,7 +114,7 @@ public class SingleLinkedList {
             tail=null;
         }
     }
-    public void deleteNoteAt(int location){
+    public void deleteNodeAt(int location){
         int length= getSize();
         if(!isExistsLinkedList()){
             System.out.println("There is not node in the link list. LinkedList is empty");
