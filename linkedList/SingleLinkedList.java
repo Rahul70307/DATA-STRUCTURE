@@ -26,31 +26,7 @@ public class SingleLinkedList {
         return  head;
 
     }
-//    public void insertInLinkedList1(int nodeValue, int location){
-//        SingleNode node= new SingleNode();
-//        node.setValue( nodeValue);
-//        node.setNext(null);
-//        if(location ==1){
-//            node.setNext(head);
-//            head= node;
-//        }
-//        else if (location >getSize() ){
-//            tail.setNext(node);
-//            tail= node;
-//        }
-//        else{
-//            SingleNode tmp = head;
-//            int counter = 0;
-//            while( counter< location-2){
-//                tmp = tmp.getNext();
-//                counter++;
-//            }
-//            node.setNext(tmp.getNext());
-//            tmp.setNext(node);
-//        }
-//        setSize(getSize()+1);
-//
-//    }
+
     public void insertInLikedList(int nodeValue, int location){
         SingleNode node= new SingleNode();
         node.setValue( nodeValue);
@@ -156,4 +132,5 @@ public class SingleLinkedList {
             setSize(getSize()-1);
         }
     }
+
 }
