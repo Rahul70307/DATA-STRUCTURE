@@ -11,8 +11,9 @@ public class BinarySearchTreeByLinkedListMain {
         bst.insert(150);
         bst.deleteNode(100);
         bst.searchForValue(30);
+        bst.printTreeGraphically();
 
-        bst.traverseBSTInOrder(bst.root);
+//        bst.traverseBSTInOrder(bst.root);
 
     }
 

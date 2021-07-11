@@ -4,6 +4,8 @@ import com.sun.prism.shader.Solid_RadialGradient_REFLECT_AlphaTest_Loader;
 import node.BinaryNode;
 
 import javax.sql.rowset.spi.SyncResolver;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class BinarySearchTreeByLinkedList {
     BinaryNode root;
@@ -123,6 +125,42 @@ public class BinarySearchTreeByLinkedList {
         }
 
     }
+    void printTreeGraphically() {
+        Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
+        Queue<Integer> level = new LinkedList<Integer>();
+
+        int CurrentLevel = 1;
+        boolean previousLevelWasAllNull = false;
+        queue.add(root);
+        level.add(1);
+
+        System.out.println("\nPrinting Level order traversal of Tree...");
+        if(root == null) {
+            System.out.println("Tree does not exists !");
+            return;
+        }
+
+        while (!queue.isEmpty()) {
+            if(CurrentLevel == level.peek()) { //if we are in the same level
+                if(queue.peek()==null) {
+                    queue.add(null);level.add(CurrentLevel+1);
+                }else {
+                    queue.add(queue.peek().getLeft());level.add(CurrentLevel+1);
+                    queue.add(queue.peek().getRight());level.add(CurrentLevel+1);
+                    previousLevelWasAllNull = false;
+                }
+                System.out.print(queue.remove() + "  ");level.remove();
+            }else { //level has changed
+                System.out.println("\n");
+                CurrentLevel++;
+                if(previousLevelWasAllNull == true) {
+                    break;
+                }
+                previousLevelWasAllNull = true;
+            }
+        }//end of loop
+    }//end of method
+
 
 
 }

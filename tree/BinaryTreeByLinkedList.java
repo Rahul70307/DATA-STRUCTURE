@@ -105,6 +105,20 @@ public class BinaryTreeByLinkedList {
             System.out.println("Successfully deleted the tree");
         }
     }
+//    public void deleteNodeInBinaryTree(int val){
+//        BinaryNode nodeToBeDeleted =deletNode(root,val);
+//    }
+//    public BinaryNode deletNode(BinaryNode node, int val){
+//        if(node==null){
+//            return null;
+//        }
+//        if(node.getValue()==val){
+//            return node;
+//        }
+//        deletNode(node.getLeft(),val);
+//        deletNode(node.getRight(),val);
+//
+//    }
     public void search(int val){
         Queue<BinaryNode> queue = new LinkedList<>();
         queue.add(root);
