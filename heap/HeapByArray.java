@@ -9,8 +9,8 @@ public class HeapByArray {
         sizeOfTree=0;
     }
     public void insertIntoHeap(int value){
-        if(sizeOfTree>=arr.length){
-            System.out.println("Heap is full");
+        if(sizeOfTree>=arr.length-1){
+            System.out.println("Cant insert "+value+" into heap. Heap is full");
         }else{
             arr[++sizeOfTree]=value;
             heapifyFromBotttomToUp(sizeOfTree);
@@ -31,6 +31,13 @@ public class HeapByArray {
         }
 
 
+    }
+    public void peek(){
+        if(sizeOfTree==0){
+            System.out.println("Heap is empty");
+        }else{
+            System.out.println(arr[1]);
+        }
     }
     private void heapifyFromBotttomToUp(int index){
         int parent = index/2;

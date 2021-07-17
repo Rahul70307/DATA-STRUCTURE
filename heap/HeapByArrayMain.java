@@ -10,12 +10,15 @@ public class HeapByArrayMain {
         minHeap.insertIntoHeap(5);
         minHeap.insertIntoHeap(50);
         minHeap.insertIntoHeap(2);
-        minHeap.deleteFromHeap();
-        minHeap.deleteFromHeap();
-        minHeap.deleteFromHeap();
-        minHeap.deleteFromHeap();
-        minHeap.deleteFromHeap();
-        minHeap.deleteFromHeap();
+        minHeap.insertIntoHeap(60);
+        minHeap.peek();
+
+//        minHeap.deleteFromHeap();
+//        minHeap.deleteFromHeap();
+//        minHeap.deleteFromHeap();
+//        minHeap.deleteFromHeap();
+//        minHeap.deleteFromHeap();
+//        minHeap.deleteFromHeap();
 //        minHeap.deleteFromHeap();
         minHeap.levelOrderTraversal();
 
